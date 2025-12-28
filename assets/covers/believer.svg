@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="28" fill="#0a0f1a"/>
+  <rect x="80" y="120" width="352" height="272" rx="22" fill="#38bdf8" opacity=".3"/>
+  <text x="50%" y="54%" text-anchor="middle" font-family="Inter,Arial" font-size="92" fill="#38bdf8" font-weight="800">B</text>
+  <text x="28" y="476" font-family="Inter,Arial" font-size="36" fill="#fff">Believer</text>
+</svg>

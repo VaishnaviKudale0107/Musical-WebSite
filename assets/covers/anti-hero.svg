@@ -1,0 +1,7 @@
+<svg width="160" height="140" viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="160" height="140" fill="#8B0000"/>
+<circle cx="80" cy="50" r="25" fill="#FFA500"/>
+<path d="M60 80 Q80 70 100 80 Q80 90 60 80" fill="#FFA500"/>
+<text x="80" y="110" text-anchor="middle" fill="#FFA500" font-family="Arial" font-size="10" font-weight="bold">ANTI-HERO</text>
+<text x="80" y="125" text-anchor="middle" fill="#FFA500" font-family="Arial" font-size="8">Taylor Swift</text>
+</svg>

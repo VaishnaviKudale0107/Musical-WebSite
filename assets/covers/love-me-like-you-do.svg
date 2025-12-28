@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="28" fill="#1a0810"/>
+  <path d="M256 410c-100-56-150-108-150-170 0-40 28-70 70-70 32 0 56 18 80 44 24-26 48-44 80-44 42 0 70 30 70 70 0 62-50 114-150 170z" fill="#ef4444"/>
+  <text x="28" y="476" font-family="Inter,Arial" font-size="28" fill="#fff">Love Me Like You Do</text>
+</svg>

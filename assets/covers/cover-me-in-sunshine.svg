@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="28" fill="#1a1306"/>
+  <circle cx="256" cy="200" r="100" fill="#f59e0b"/>
+  <g stroke="#fbbf24" stroke-width="10">
+    <line x1="256" y1="40" x2="256" y2="120"/>
+    <line x1="256" y1="280" x2="256" y2="460"/>
+    <line x1="96" y1="200" x2="176" y2="200"/>
+    <line x1="336" y1="200" x2="416" y2="200"/>
+  </g>
+  <text x="28" y="476" font-family="Inter,Arial" font-size="28" fill="#fff">Cover Me In Sunshine</text>
+</svg>

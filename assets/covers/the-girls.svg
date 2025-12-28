@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="28" fill="#120a1a"/>
+  <g fill="#f472b6">
+    <circle cx="160" cy="220" r="70"/>
+    <circle cx="280" cy="260" r="80" opacity=".8"/>
+    <circle cx="380" cy="210" r="60" opacity=".6"/>
+  </g>
+  <text x="28" y="476" font-family="Inter,Arial" font-size="36" fill="#fff">The Girls</text>
+</svg>

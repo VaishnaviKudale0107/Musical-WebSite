@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="28" fill="#06141a"/>
+  <g fill="#22d3ee">
+    <circle cx="170" cy="190" r="56"/>
+    <circle cx="342" cy="190" r="56"/>
+    <circle cx="256" cy="320" r="56"/>
+  </g>
+  <text x="24" y="476" font-family="Inter,Arial" font-size="32" fill="#fff">Shape of You</text>
+</svg>

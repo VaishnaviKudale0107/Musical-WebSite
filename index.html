@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <h1 class="sidebar__title">Library</h1>
+            <nav class="sidebar__nav" id="libTabs">
+                <a class="sidebar__link is-active" href="#" data-tab="recent">Recent</a>
+                <a class="sidebar__link" href="#" data-tab="saved">My Playlist</a>
+            </nav>
+            <ul class="playlist" id="recentList"></ul>
+            <ul class="playlist hide" id="savedList"></ul>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div class="search">
+                    <span class="search__icon">🔎</span>
+                    <input class="search__input" type="text" placeholder="Search Music...." aria-label="Search">
+                    <img class="avatar" src="assets/avatar.svg" alt="User"/>
+                </div>
+            </header>
+
+            <!-- Mood Filter Buttons -->
+            <section class="section">
+                <div class="mood-filters">
+                    <button class="mood-btn active" data-mood="all">All</button>
+                    <button class="mood-btn" data-mood="happy">😊 Happy</button>
+                    <button class="mood-btn" data-mood="sad">😢 Sad</button>
+                    <button class="mood-btn" data-mood="energetic">⚡ Energetic</button>
+                    <button class="mood-btn" data-mood="romantic">💕 Romantic</button>
+                    <button class="mood-btn" data-mood="chill">🌙 Chill</button>
+                    <button class="mood-btn" data-mood="party">🎉 Party</button>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section__title">Popular Songs</h2>
+                <div class="carousel" id="popular">
+                    <!-- Happy Mood Songs -->
+                    <article class="card" data-src="https://actions.google.com/sounds/v1/cartoon/pop.ogg" data-title="Cover Me In Sunshine" data-artist="Pink" data-cover="assets/covers/cover-me-in-sunshine.svg" data-mood="happy">
+                        <img src="assets/covers/cover-me-in-sunshine.svg" alt="Cover Me In Sunshine">
+                        <h3>Cover Me In Sunshine</h3>
+                        <p>Pink</p>
+                        <button class="card__play" data-action="play">▶</button>
+                        <button class="card__save" data-action="save" title="Save">＋</button>
+                        <button class="card__download" data-action="download" title="Download">⬇</button>
+                    </article>
+                    <article class="card" data-src="https://actions.google.com/sounds/v1/cartoon/zip.ogg" data-title="Cheap Thrills" data-artist="Sia" data-cover="assets/covers/cheap-thrills.svg" data-mood="happy">
+                        <img src="assets/covers/cheap-thrills.svg" alt="Cheap Thrills">
+                        <h3>Cheap Thrills</h3>
+                        <p>Sia</p>
+                        <button class="card__play" data-action="play">▶</button>
+                        <button class="card__save" data-action="save" title="Save">＋</button>
+                        <button class="card__download" data-action="download" title="Download">⬇</button>
+                    </article>
+                    <article class="card" data-src="https://actions.google.com/sounds/v1/cartoon/siren_whistle.ogg" data-title="Shape of You" data-artist="Ed Sheeran" data-cover="assets/covers/shape-of-you.svg" data-mood="happy">
+                        <img src="assets/covers/shape-of-you.svg" alt="Shape of You">
+                        <h3>Shape of You</h3>
+                        <p>Ed Sheeran</p>
+                        <button class="card__play" data-action="play">▶</button>
+                        <button class="card__save" data-action="save" title="Save">＋</button>
+                        <button class="card__download" data-action="download" title="Download">⬇</button>
+                    </article>
+                    
+                    <!-- Energetic Mood Songs -->
+                    <article class="card" data-src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg" data-title="How You Like That" data-artist="BLACKPINK" data-cover="assets/covers/how-you-like-that.svg" data-mood="energetic">
+                        <img src="assets/covers/how-you-like-that.svg" alt="How You Like That">
+                        <h3>How You Like That</h3>
+                        <p>BLACKPINK</p>
+                        <button class="card__play" data-action="play">▶</button>
+                        <button class="card__save" data-action="save" title="Save">＋</button>
+                        <button class="card__download" data-action="download" title="Download">⬇</button>
+                    </article>
+                    <article class="card" data-src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" data-title="Believer" data-artist="Imagine Dragons" data-cover="assets/covers/believer.svg" data-mood="energetic">
+                        <img src="assets/covers/believer.svg" alt="Believer">
+                        <h3>Believer</h3>
+                        <p>Imagine Dragons</p>
+                        <button class="card__play" data-action="play">▶</button>
+                        <button class="card__save" data-action="save" title="Save">＋</button>
+                        <button class="card__download" data-action="download" title="Download">⬇</button>
+                    </article>
+                    
+                    <!-- Sad Mood Songs -->
+                    <article class="card" data-src="https://actions.google.com/sounds/v1/cartoon/boing.ogg" data-title="Faded" data-artist="Alan Walker" data-cover="assets/covers/faded.svg" data-mood="sad">
+                        <img src="assets/covers/faded.svg" alt="Faded">
+                        <h3>Faded</h3>
+                        <p>Alan Walker</p>
+                        <button class="card__play" data-action="play">▶</button>
+                        <button class="card__save" data-action="save" title="Save">＋</button>
+                        <button class="card__download" data-action="download" title="Download">⬇</button>
+                    </article>
+                    <article class="card" data-src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" data-title="On My Way" data-artist="Alan Walker" data-cover="assets/covers/on-my-way.svg" data-mood="sad">
+                        <img src="assets/covers/on-my-way.svg" alt="On My Way">
+                        <h3>On My Way</h3>
+                        <p>Alan Walker</p>
+                        <button class="card__play" data-action="play">▶</button>
+                        <button class="card__save" data-action="save" title="Save">＋</button>
+                        <button class="card__download" data-action="download" title="Download">⬇</button>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section section--artists">
+                <div class="artists-header">
+                    <h2 class="section__title">Popular Artists</h2>
+                    <div class="artists-nav">
+                        <button class="artists-nav-btn" id="artistsPrevBtn" aria-label="Previous artists">‹</button>
+                        <button class="artists-nav-btn" id="artistsNextBtn" aria-label="Next artists">›</button>
+                    </div>
+                </div>
+                <div class="artists" id="artistBar">
+                    <!-- Bollywood Artists -->
+                    <img src="assets/artists/arijit.svg" alt="Arijit Singh" class="artist" data-artist="Arijit Singh">
+                    <img src="assets/artists/arjit2.svg" alt="Armaan Malik" class="artist" data-artist="Armaan Malik">
+                    <img src="assets/artists/atif.svg" alt="Atif Aslam" class="artist" data-artist="Atif Aslam">
+                    <img src="assets/artists/kk.svg" alt="KK" class="artist" data-artist="KK">
+                    <img src="assets/artists/ar_rahman.svg" alt="A.R. Rahman" class="artist" data-artist="A.R. Rahman">
+                    <img src="assets/artists/vishal_mishra.svg" alt="Vishal Mishra" class="artist" data-artist="Vishal Mishra">
+                    
+                    <!-- International Artists -->
+                    <img src="assets/artists/justin.svg" alt="Justin Bieber" class="artist" data-artist="Justin Bieber">
+                    <img src="assets/artists/selena.svg" alt="Selena Gomez" class="artist" data-artist="Selena Gomez">
+                    <img src="assets/artists/zayn.svg" alt="Zayn" class="artist" data-artist="Zayn">
+                    <img src="assets/artists/taylor.svg" alt="Taylor Swift" class="artist" data-artist="Taylor Swift">
+                    
+                    <!-- EDM/Electronic Artists -->
+                    <img src="assets/artists/zedd.svg" alt="Zedd" class="artist" data-artist="Zedd">
+                    <img src="assets/artists/dzeko.svg" alt="Dzeko" class="artist" data-artist="Dzeko">
+                    <img src="assets/artists/borgeous.svg" alt="Borgeous" class="artist" data-artist="Borgeous">
+                    <img src="assets/artists/cash_cash.svg" alt="Cash Cash" class="artist" data-artist="Cash Cash">
+                    <img src="assets/artists/sophie_francis.svg" alt="Sophie Francis" class="artist" data-artist="Sophie Francis">
+                    <img src="assets/artists/dante_klein.svg" alt="Dante Klein" class="artist" data-artist="Dante Klein">
+                    <img src="assets/artists/alec_benjamin.svg" alt="Alec Benjamin" class="artist" data-artist="Alec Benjamin">
+                </div>
+            </section>
+
+            <section class="section section--hidden" id="artistSongsSection">
+                <h2 class="section__title" id="artistSongsTitle">Artist Songs</h2>
+                <div class="carousel" id="artistSongs"></div>
+            </section>
+
+            <!-- Legal Music Sources Info -->
+            <section class="section">
+                <h2 class="section__title">Legal Music Sources</h2>
+                <div class="legal-sources">
+                    <div class="source-card">
+                        <h3>🎵 Free Music Archive</h3>
+                        <p>High-quality, royalty-free music from independent artists</p>
+                        <a href="https://freemusicarchive.org/" target="_blank" rel="noopener" class="source-link">Visit Site →</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>🔊 Freesound</h3>
+                        <p>Creative Commons licensed sound effects and music</p>
+                        <a href="https://freesound.org/" target="_blank" rel="noopener" class="source-link">Visit Site →</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>📺 YouTube Audio Library</h3>
+                        <p>Free music and sound effects for creators</p>
+                        <a href="https://www.youtube.com/audiolibrary/music" target="_blank" rel="noopener" class="source-link">Visit Site →</a>
+                    </div>
+                    <div class="source-card">
+                        <h3>🎨 Pixabay Music</h3>
+                        <p>Royalty-free music and sound effects</p>
+                        <a href="https://pixabay.com/music/" target="_blank" rel="noopener" class="source-link">Visit Site →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="player" id="player">
+        <div class="player__left">
+            <img class="player__cover" id="playerCover" src="assets/covers/on-my-way.svg" alt="cover">
+            <div class="player__meta">
+                <div class="player__title" id="playerTitle">On My Way</div>
+                <div class="player__artist" id="playerArtist">Alan Walker</div>
+            </div>
+        </div>
+        <div class="player__center">
+            <button id="prevBtn" class="control">⏮</button>
+            <button id="playPauseBtn" class="control control--lg">▶</button>
+            <button id="nextBtn" class="control">⏭</button>
+            <div class="time">
+                <span id="currentTime">0:00</span>
+            <input id="seek" type="range" min="0" max="100" value="0" step="1" aria-label="Seek bar">
+            <span id="duration">0:00</span>
+            </div>
+        </div>
+        <div class="player__right">
+            <span class="volume-icon">🔊</span>
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume control">
+        </div>
+        <audio id="audio" preload="metadata"></audio>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
